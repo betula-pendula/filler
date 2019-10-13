@@ -1,0 +1,154 @@
+// SASS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home
+//   width: $icon-home-width
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites
+$americanexpress-dark-name: 'americanexpress-dark'
+$americanexpress-dark-x: 100px
+$americanexpress-dark-y: 67px
+$americanexpress-dark-offset-x: -100px
+$americanexpress-dark-offset-y: -67px
+$americanexpress-dark-width: 41px
+$americanexpress-dark-height: 30px
+$americanexpress-dark-total-width: 216px
+$americanexpress-dark-total-height: 135px
+$americanexpress-dark-image: 'sprite.png'
+$americanexpress-dark: (100px, 67px, -100px, -67px, 41px, 30px, 216px, 135px, 'sprite.png', 'americanexpress-dark', )
+$cvc-name: 'cvc'
+$cvc-x: 0px
+$cvc-y: 0px
+$cvc-offset-x: 0px
+$cvc-offset-y: 0px
+$cvc-width: 108px
+$cvc-height: 67px
+$cvc-total-width: 216px
+$cvc-total-height: 135px
+$cvc-image: 'sprite.png'
+$cvc: (0px, 0px, 0px, 0px, 108px, 67px, 216px, 135px, 'sprite.png', 'cvc', )
+$cvv-name: 'cvv'
+$cvv-x: 108px
+$cvv-y: 0px
+$cvv-offset-x: -108px
+$cvv-offset-y: 0px
+$cvv-width: 108px
+$cvv-height: 67px
+$cvv-total-width: 216px
+$cvv-total-height: 135px
+$cvv-image: 'sprite.png'
+$cvv: (108px, 0px, -108px, 0px, 108px, 67px, 216px, 135px, 'sprite.png', 'cvv', )
+$discover-dark-name: 'discover-dark'
+$discover-dark-x: 141px
+$discover-dark-y: 67px
+$discover-dark-offset-x: -141px
+$discover-dark-offset-y: -67px
+$discover-dark-width: 41px
+$discover-dark-height: 30px
+$discover-dark-total-width: 216px
+$discover-dark-total-height: 135px
+$discover-dark-image: 'sprite.png'
+$discover-dark: (141px, 67px, -141px, -67px, 41px, 30px, 216px, 135px, 'sprite.png', 'discover-dark', )
+$mastercard-dark-name: 'mastercard-dark'
+$mastercard-dark-x: 0px
+$mastercard-dark-y: 105px
+$mastercard-dark-offset-x: 0px
+$mastercard-dark-offset-y: -105px
+$mastercard-dark-width: 41px
+$mastercard-dark-height: 30px
+$mastercard-dark-total-width: 216px
+$mastercard-dark-total-height: 135px
+$mastercard-dark-image: 'sprite.png'
+$mastercard-dark: (0px, 105px, 0px, -105px, 41px, 30px, 216px, 135px, 'sprite.png', 'mastercard-dark', )
+$paypal-name: 'paypal'
+$paypal-x: 0px
+$paypal-y: 67px
+$paypal-offset-x: 0px
+$paypal-offset-y: -67px
+$paypal-width: 100px
+$paypal-height: 38px
+$paypal-total-width: 216px
+$paypal-total-height: 135px
+$paypal-image: 'sprite.png'
+$paypal: (0px, 67px, 0px, -67px, 100px, 38px, 216px, 135px, 'sprite.png', 'paypal', )
+$q-name: 'q'
+$q-x: 182px
+$q-y: 67px
+$q-offset-x: -182px
+$q-offset-y: -67px
+$q-width: 12px
+$q-height: 12px
+$q-total-width: 216px
+$q-total-height: 135px
+$q-image: 'sprite.png'
+$q: (182px, 67px, -182px, -67px, 12px, 12px, 216px, 135px, 'sprite.png', 'q', )
+$visa-dark-name: 'visa-dark'
+$visa-dark-x: 41px
+$visa-dark-y: 105px
+$visa-dark-offset-x: -41px
+$visa-dark-offset-y: -105px
+$visa-dark-width: 41px
+$visa-dark-height: 30px
+$visa-dark-total-width: 216px
+$visa-dark-total-height: 135px
+$visa-dark-image: 'sprite.png'
+$visa-dark: (41px, 105px, -41px, -105px, 41px, 30px, 216px, 135px, 'sprite.png', 'visa-dark', )
+$spritesheet-width: 216px
+$spritesheet-height: 135px
+$spritesheet-image: 'sprite.png'
+$spritesheet-sprites: ($americanexpress-dark, $cvc, $cvv, $discover-dark, $mastercard-dark, $paypal, $q, $visa-dark, )
+$spritesheet: (216px, 135px, 'sprite.png', $spritesheet-sprites, )
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home
+//   @include sprite-width($icon-home)
+//
+// .icon-email
+//   @include sprite($icon-email)
+//
+// Example usage in HTML:
+//   `display: block` sprite:
+//   <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//   // CSS
+//   .icon {
+//     display: inline-block;
+//   }
+//
+//   // HTML
+//   <i class="icon icon-home"></i>
+@mixin sprite-width($sprite)
+  width: nth($sprite, 5)
+
+@mixin sprite-height($sprite)
+  height: nth($sprite, 6)
+
+@mixin sprite-position($sprite)
+  $sprite-offset-x: nth($sprite, 3)
+  $sprite-offset-y: nth($sprite, 4)
+  background-position: $sprite-offset-x  $sprite-offset-y
+
+@mixin sprite-image($sprite)
+  $sprite-image: nth($sprite, 9)
+  background-image: url(../sprites/#{$sprite-image})
+
+@mixin sprite($sprite)
+  @include sprite-image($sprite)
+  @include sprite-position($sprite)
+  @include sprite-width($sprite)
+  @include sprite-height($sprite)
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SASS
+//
+// @include sprites($spritesheet-sprites)
+@mixin sprites($sprites)
+  @each $sprite in $sprites
+    $sprite-name: nth($sprite, 10)
+    .#{$sprite-name}
+      @include sprite($sprite)

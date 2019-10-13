@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<div class="h" onclick="hiddenTooltip()"></div>
+	<h1>Thank you for choosing to subscribe to PDFfiller services!</h1>
+	<div class="block">
+		<div class="clipart-block">
+			<div class="clipart">
+				<i class="icon visa-dark"></i>
+				<i class="icon mc"></i>
+				<i class="icon dis"></i>
+				<i class="icon american"></i>
+			</div>
+		</div>
+		<form action="" class="pay-form" name="form" onsubmit="return false">
+			<label class="cardholder-label">
+				<p>Cardholder Name</p>
+			</label>
+			<div class="cardholder-input">
+				<div class="tooltip">
+					<input class="first-name" type="text" name="firstname" placeholder="First Name"
+						onclick="hiddenTooltip()">
+					<span class="tooltiptext">First Name</span>
+				</div>
+				<div class="tooltip">
+					<input class="last-name" type="text" name="lastname" placeholder="Last Name"
+						onclick="hiddenTooltip()">
+					<span class="tooltiptext">Last Name</span>
+				</div>
+			</div>
+
+			<label class="cardnumber-label">
+				<p>Card Number</p>
+			</label>
+			<div class="cardholder-input">
+				<div class="tooltip">
+					<input class="card-number" type="text" name="cardnumber" onclick="hiddenTooltip()"
+						placeholder="&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;">
+					<span class="tooltiptext">Card Number</span>
+				</div>
+				<div class="clipart-md">
+					<i class="icon visa-dark"></i>
+					<i class="icon mc"></i>
+					<i class="icon dis"></i>
+					<i class="icon american"></i>
+				</div>
+			</div>
+
+			<div class="card-date-cvv">
+				<div class="exp">
+					<label class="exp-date-label">
+						<p>Exp. Date</p>
+					</label>
+					<div class="exp-date">
+						<div class="tooltip">
+							<select class="exp-date-mm" name="mounth" onclick="hiddenTooltip()">
+								<option value="mm">mm</option>
+								<option value="01">01</option>
+								<option value="02">02</option>
+								<option value="03">03</option>
+								<option value="04">04</option>
+								<option value="05">05</option>
+								<option value="06">06</option>
+								<option value="07">07</option>
+								<option value="08">08</option>
+								<option value="09">09</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+								<option value="12">12</option>
+							</select>
+							<span class="tooltiptext">Mounth</span>
+						</div> /
+						<div class="tooltip">
+							<select class="exp-date-yy" name="year" onclick="hiddenTooltip()">
+								<option value="yy">yyyy</option>
+								<option value="16">2016</option>
+								<option value="17">2017</option>
+								<option value="18">2018</option>
+								<option value="19">2019</option>
+								<option value="20">2020</option>
+								<option value="21">2021</option>
+							</select>
+							<span class="tooltiptext">Year</span>
+						</div>
+					</div>
+				</div>
+				<div class="cvc">
+					<label>
+						<p>CVV/CVC</p>
+					</label>
+					<div class="cvv-cvc">
+						<div class="tooltip">
+							<div class="icon q">
+								<div class="descr">
+									<div class="cvv-d">
+										<div class="icon-cvv"></div>
+										<p><strong>Visa, MasterCard</strong><br>
+											3-Digit Verification<br>
+											Number</p>
+									</div>
+									<div class="hr-d"></div>
+									<div class="cvc-d">
+										<div class="icon-cvc"></div>
+										<p><strong>American Express</strong><br>
+											4-Digit Verification<br>
+											Number</p>
+									</div>
+								</div>
+							</div>
+							<input class="cvv-cvc-input" type="text" placeholder="XXXX" name="cvv"
+								onclick="hiddenTooltip()">
+							<span class="tooltiptext tool-cvc">CVV/CVC</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<label class="zip-label">
+				<p>Zip Code</p>
+			</label>
+			<div class="zip-code">
+				<div class="tooltip">
+					<input class="zip-code-input" type="text" placeholder="01001" name="zipcode"
+						onclick="hiddenTooltip()">
+					<span class="tooltiptext tool-zip">Zip Code</span>
+				</div>
+			</div>
+
+			<div class="pay-pal pay-pal-lg">
+				<span>Or pay with Paypal</span>
+				<button type="button">
+				</button>
+			</div>
+
+			<button class="start-button" onclick="validateForm()">
+				Start My Subscription for $19.99/mo.
+			</button>
+
+		</form>
+	</div>
+	<script src="js/libs.min.js"></script>
+
+</body>
+
+</html>

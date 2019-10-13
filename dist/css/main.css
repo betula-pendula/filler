@@ -1,0 +1,856 @@
+body {
+  background-color: white; }
+
+.h {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%; }
+
+h1 {
+  color: #343434;
+  width: 290px;
+  margin: 0 auto;
+  padding-top: 30px;
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center; }
+
+.tooltip {
+  position: relative;
+  display: inline-block; }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -85px;
+    border: solid 1px #ef5350;
+    background: #ffebee;
+    -webkit-box-shadow: 0px 2px2px rgba(0, 0, 0, 0.13);
+            box-shadow: 0px 2px2px rgba(0, 0, 0, 0.13);
+    color: #ef5350;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 17px; }
+    .tooltip .tooltiptext::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -7px;
+      border-width: 7px;
+      border-style: solid;
+      border-color: #ef5350 transparent transparent transparent;
+      border-top: 10px solid #ef5350; }
+    .tooltip .tooltiptext::after {
+      content: '';
+      position: absolute;
+      top: 98%;
+      left: 50%;
+      margin-left: -6px;
+      border-width: 6px;
+      border-style: solid;
+      border-color: #ef5350 transparent transparent transparent;
+      border-top: 9px solid #ffebee; }
+
+.clipart-block {
+  width: 100%;
+  height: 30px; }
+  .clipart-block .clipart {
+    text-align: center; }
+    .clipart-block .clipart img {
+      margin-left: 5px;
+      margin-right: 5px; }
+
+.pay-form {
+  padding-top: 0.5em;
+  width: 290px;
+  margin: 0 auto; }
+  .pay-form p {
+    -webkit-margin-before: 14px;
+            margin-block-start: 14px;
+    -webkit-margin-after: 11px;
+            margin-block-end: 11px;
+    padding-left: 1px;
+    color: #444444;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 14px; }
+
+.cardholder-input {
+  text-align: center;
+  margin: 0 auto; }
+
+.zip-code {
+  text-align: center;
+  margin: 0 auto; }
+
+.first-name {
+  height: 32px;
+  border: solid 1px #cccccc;
+  background: #ffffff;
+  -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  width: 130px;
+  padding-left: 10px; }
+  .first-name::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .first-name::-moz-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .first-name:-ms-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .first-name::-ms-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .first-name::placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .first-name:focus {
+    outline: 0;
+    border: solid 1px #ef5350;
+    -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2); }
+    .first-name:focus::-webkit-input-placeholder {
+      opacity: 0; }
+    .first-name:focus::-moz-placeholder {
+      opacity: 0; }
+    .first-name:focus:-ms-input-placeholder {
+      opacity: 0; }
+    .first-name:focus::-ms-input-placeholder {
+      opacity: 0; }
+    .first-name:focus::placeholder {
+      opacity: 0; }
+
+.last-name {
+  height: 32px;
+  border: solid 1px #cccccc;
+  background: #ffffff;
+  -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  width: 130px;
+  padding-left: 10px; }
+  .last-name::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .last-name::-moz-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .last-name:-ms-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .last-name::-ms-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .last-name::placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .last-name:focus {
+    outline: 0;
+    border: solid 1px #ef5350;
+    -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2); }
+    .last-name:focus::-webkit-input-placeholder {
+      opacity: 0; }
+    .last-name:focus::-moz-placeholder {
+      opacity: 0; }
+    .last-name:focus:-ms-input-placeholder {
+      opacity: 0; }
+    .last-name:focus::-ms-input-placeholder {
+      opacity: 0; }
+    .last-name:focus::placeholder {
+      opacity: 0; }
+
+.card-number {
+  height: 32px;
+  border: solid 1px #cccccc;
+  background: #ffffff;
+  -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  width: 276px;
+  padding-left: 10px; }
+  .card-number::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .card-number::-moz-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .card-number:-ms-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .card-number::-ms-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .card-number::placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .card-number:focus {
+    outline: 0;
+    border: solid 1px #ef5350;
+    -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2); }
+    .card-number:focus::-webkit-input-placeholder {
+      opacity: 0; }
+    .card-number:focus::-moz-placeholder {
+      opacity: 0; }
+    .card-number:focus:-ms-input-placeholder {
+      opacity: 0; }
+    .card-number:focus::-ms-input-placeholder {
+      opacity: 0; }
+    .card-number:focus::placeholder {
+      opacity: 0; }
+
+.zip-code-input {
+  height: 32px;
+  border: solid 1px #cccccc;
+  background: #ffffff;
+  -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  width: 276px;
+  padding-left: 10px; }
+  .zip-code-input::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .zip-code-input::-moz-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .zip-code-input:-ms-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .zip-code-input::-ms-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .zip-code-input::placeholder {
+    opacity: 1;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s; }
+  .zip-code-input:focus {
+    outline: 0;
+    border: solid 1px #ef5350;
+    -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+            box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2); }
+    .zip-code-input:focus::-webkit-input-placeholder {
+      opacity: 0; }
+    .zip-code-input:focus::-moz-placeholder {
+      opacity: 0; }
+    .zip-code-input:focus:-ms-input-placeholder {
+      opacity: 0; }
+    .zip-code-input:focus::-ms-input-placeholder {
+      opacity: 0; }
+    .zip-code-input:focus::placeholder {
+      opacity: 0; }
+
+.card-date-cvv {
+  white-space: nowrap; }
+  .card-date-cvv .exp {
+    display: inline-block; }
+    .card-date-cvv .exp .exp-date {
+      width: 166px;
+      display: inline-block; }
+      .card-date-cvv .exp .exp-date .exp-date-mm {
+        height: 32px;
+        border: solid 1px #cccccc;
+        background: #ffffff;
+        -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+                box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        height: 36px;
+        width: 64px;
+        margin-right: 5px; }
+        .card-date-cvv .exp .exp-date .exp-date-mm::-webkit-input-placeholder {
+          opacity: 1;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s; }
+        .card-date-cvv .exp .exp-date .exp-date-mm::-moz-placeholder {
+          opacity: 1;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s; }
+        .card-date-cvv .exp .exp-date .exp-date-mm:-ms-input-placeholder {
+          opacity: 1;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s; }
+        .card-date-cvv .exp .exp-date .exp-date-mm::-ms-input-placeholder {
+          opacity: 1;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s; }
+        .card-date-cvv .exp .exp-date .exp-date-mm::placeholder {
+          opacity: 1;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s; }
+        .card-date-cvv .exp .exp-date .exp-date-mm:focus {
+          outline: 0;
+          border: solid 1px #ef5350;
+          -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+                  box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2); }
+          .card-date-cvv .exp .exp-date .exp-date-mm:focus::-webkit-input-placeholder {
+            opacity: 0; }
+          .card-date-cvv .exp .exp-date .exp-date-mm:focus::-moz-placeholder {
+            opacity: 0; }
+          .card-date-cvv .exp .exp-date .exp-date-mm:focus:-ms-input-placeholder {
+            opacity: 0; }
+          .card-date-cvv .exp .exp-date .exp-date-mm:focus::-ms-input-placeholder {
+            opacity: 0; }
+          .card-date-cvv .exp .exp-date .exp-date-mm:focus::placeholder {
+            opacity: 0; }
+      .card-date-cvv .exp .exp-date .exp-date-yy {
+        height: 32px;
+        border: solid 1px #cccccc;
+        background: #ffffff;
+        -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+                box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        height: 36px;
+        width: 79px;
+        margin-left: 5px; }
+        .card-date-cvv .exp .exp-date .exp-date-yy::-webkit-input-placeholder {
+          opacity: 1;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s; }
+        .card-date-cvv .exp .exp-date .exp-date-yy::-moz-placeholder {
+          opacity: 1;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s; }
+        .card-date-cvv .exp .exp-date .exp-date-yy:-ms-input-placeholder {
+          opacity: 1;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s; }
+        .card-date-cvv .exp .exp-date .exp-date-yy::-ms-input-placeholder {
+          opacity: 1;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s; }
+        .card-date-cvv .exp .exp-date .exp-date-yy::placeholder {
+          opacity: 1;
+          -webkit-transition: opacity .2s;
+          -o-transition: opacity .2s;
+          transition: opacity .2s; }
+        .card-date-cvv .exp .exp-date .exp-date-yy:focus {
+          outline: 0;
+          border: solid 1px #ef5350;
+          -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+                  box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2); }
+          .card-date-cvv .exp .exp-date .exp-date-yy:focus::-webkit-input-placeholder {
+            opacity: 0; }
+          .card-date-cvv .exp .exp-date .exp-date-yy:focus::-moz-placeholder {
+            opacity: 0; }
+          .card-date-cvv .exp .exp-date .exp-date-yy:focus:-ms-input-placeholder {
+            opacity: 0; }
+          .card-date-cvv .exp .exp-date .exp-date-yy:focus::-ms-input-placeholder {
+            opacity: 0; }
+          .card-date-cvv .exp .exp-date .exp-date-yy:focus::placeholder {
+            opacity: 0; }
+  .card-date-cvv .cvc {
+    display: inline-block;
+    margin-left: 11px; }
+    .card-date-cvv .cvc .cvv-cvc-input {
+      height: 32px;
+      border: solid 1px #cccccc;
+      background: #ffffff;
+      -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+              box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+      border-radius: 3px;
+      display: inline-block;
+      width: 96px;
+      padding-left: 10px; }
+      .card-date-cvv .cvc .cvv-cvc-input::-webkit-input-placeholder {
+        opacity: 1;
+        -webkit-transition: opacity .2s;
+        -o-transition: opacity .2s;
+        transition: opacity .2s; }
+      .card-date-cvv .cvc .cvv-cvc-input::-moz-placeholder {
+        opacity: 1;
+        -webkit-transition: opacity .2s;
+        -o-transition: opacity .2s;
+        transition: opacity .2s; }
+      .card-date-cvv .cvc .cvv-cvc-input:-ms-input-placeholder {
+        opacity: 1;
+        -webkit-transition: opacity .2s;
+        -o-transition: opacity .2s;
+        transition: opacity .2s; }
+      .card-date-cvv .cvc .cvv-cvc-input::-ms-input-placeholder {
+        opacity: 1;
+        -webkit-transition: opacity .2s;
+        -o-transition: opacity .2s;
+        transition: opacity .2s; }
+      .card-date-cvv .cvc .cvv-cvc-input::placeholder {
+        opacity: 1;
+        -webkit-transition: opacity .2s;
+        -o-transition: opacity .2s;
+        transition: opacity .2s; }
+      .card-date-cvv .cvc .cvv-cvc-input:focus {
+        outline: 0;
+        border: solid 1px #ef5350;
+        -webkit-box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2);
+                box-shadow: inset 1px 1px2px rgba(0, 0, 0, 0.2); }
+        .card-date-cvv .cvc .cvv-cvc-input:focus::-webkit-input-placeholder {
+          opacity: 0; }
+        .card-date-cvv .cvc .cvv-cvc-input:focus::-moz-placeholder {
+          opacity: 0; }
+        .card-date-cvv .cvc .cvv-cvc-input:focus:-ms-input-placeholder {
+          opacity: 0; }
+        .card-date-cvv .cvc .cvv-cvc-input:focus::-ms-input-placeholder {
+          opacity: 0; }
+        .card-date-cvv .cvc .cvv-cvc-input:focus::placeholder {
+          opacity: 0; }
+
+.pay-pal {
+  margin: 0 auto;
+  background: #f7f7f7;
+  height: 62px;
+  width: 286px;
+  border-radius: 6px;
+  border: solid 1px #dddddd;
+  margin-top: 1em;
+  position: relative; }
+  .pay-pal span {
+    color: #444444;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    padding-left: 20px; }
+  .pay-pal button {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    right: 20px;
+    height: 38px;
+    width: 100px;
+    background: #1e9cde;
+    border-radius: 3px;
+    border: 0;
+    background-image: url(../sprites/sprite.png);
+    background-position: 0px -67px;
+    width: 100px;
+    height: 38px; }
+
+.start-button {
+  position: relative;
+  z-index: 9999;
+  display: block;
+  height: 42px;
+  width: 286px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 3px;
+  border: 1px solid #fd7722;
+  background: #ff9000;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px; }
+
+.icon {
+  display: inline-block;
+  margin: 0 5px; }
+
+.visa-dark {
+  background-image: url(../sprites/sprite.png);
+  background-position: -41px -105px;
+  width: 41px;
+  height: 30px; }
+
+.mc {
+  background-image: url(../sprites/sprite.png);
+  background-position: 0px -105px;
+  width: 41px;
+  height: 30px; }
+
+.dis {
+  background-image: url(../sprites/sprite.png);
+  background-position: -141px -67px;
+  width: 41px;
+  height: 30px; }
+
+.american {
+  background-image: url(../sprites/sprite.png);
+  background-position: -100px -67px;
+  width: 41px;
+  height: 30px; }
+
+.icon-cvc {
+  background-image: url(../sprites/sprite.png);
+  background-position: 0px 0px;
+  width: 108px;
+  height: 67px; }
+
+.icon-cvv {
+  background-image: url(../sprites/sprite.png);
+  background-position: -108px 0px;
+  width: 108px;
+  height: 67px; }
+
+.descr {
+  display: none; }
+
+.q {
+  position: absolute;
+  top: 12px;
+  left: 80px;
+  z-index: 9999;
+  background-image: url(../sprites/sprite.png);
+  background-position: -182px -67px;
+  width: 12px;
+  height: 12px;
+  background-color: white; }
+  .q:hover .descr {
+    display: block;
+    position: absolute;
+    top: -195px;
+    left: -266px;
+    z-index: 9999;
+    width: 287px;
+    height: 182px;
+    background: white;
+    border-radius: 3px;
+    color: #444444;
+    font-family: Arial;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    border: solid 1px #cccccc;
+    -webkit-box-shadow: 0px 2px4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 2px4px rgba(0, 0, 0, 0.2); }
+    .q:hover .descr::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 270px;
+      margin-left: -7px;
+      border-width: 7px;
+      border-style: solid;
+      border-color: #cccccc transparent transparent transparent;
+      border-top: 10px solid #cccccc; }
+    .q:hover .descr::after {
+      content: '';
+      position: absolute;
+      top: 181px;
+      left: 270px;
+      margin-left: -6px;
+      border-width: 6px;
+      border-style: solid;
+      border-color: white transparent transparent transparent;
+      border-top: 9px solid white; }
+    .q:hover .descr p {
+      color: #444444;
+      font-family: Arial;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16px; }
+    .q:hover .descr .cvv-d {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      height: 67px;
+      width: 108px; }
+    .q:hover .descr .hr-d {
+      position: absolute;
+      left: 143px;
+      top: 20px;
+      width: 1px;
+      height: 142px;
+      background: #dddddd; }
+    .q:hover .descr .cvc-d {
+      position: absolute;
+      left: 157px;
+      top: 20px;
+      height: 67px;
+      width: 108px; }
+
+@media screen and (max-width: 480px) {
+  .block {
+    z-index: 1;
+    width: 90vw;
+    margin: 0 auto;
+    height: 450px;
+    margin-top: 20px; }
+  .clipart-md {
+    display: none; } }
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .block {
+    z-index: 1;
+    width: 90vw;
+    margin: 0 auto;
+    height: 450px;
+    margin-top: 20px; }
+  .clipart-block {
+    display: none; }
+  h1 {
+    width: 700px;
+    color: #444444;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 16px; }
+  .pay-form {
+    width: 612px;
+    padding-left: 40px; }
+    .pay-form p {
+      margin-top: 25px; }
+  .cardholder-label {
+    padding-left: 43px; }
+  .cardnumber-label {
+    position: absolute;
+    padding-left: 70px; }
+  .cardholder-input {
+    padding-left: 180px;
+    margin-top: 1em;
+    text-align: left; }
+  .first-name {
+    width: 162px; }
+  .last-name {
+    width: 162px;
+    margin-left: 1em; }
+  .card-number {
+    width: 162px; }
+  .cardholder-label, .cardholder-label, .exp-date-label {
+    position: absolute; }
+  .icon {
+    margin: 0 0; }
+  .card-date-cvv .cvc {
+    display: inline;
+    padding-left: 13px; }
+  .card-date-cvv .exp .exp-date {
+    width: 166px;
+    display: inline-block;
+    margin-top: 1em;
+    padding-left: 180px; }
+  .card-date-cvv .exp .exp-date .exp-date-mm {
+    width: 73px; }
+  .exp-date-label {
+    padding-left: 96px; }
+  .cvc {
+    position: absolute; }
+    .cvc .label {
+      left: 50px; }
+  .cvv-cvc-input {
+    position: absolute;
+    top: -48px;
+    left: 87px;
+    width: 76px !important; }
+  .clipart-md {
+    width: 200px;
+    display: inline;
+    position: absolute;
+    padding-top: 3px;
+    padding-left: 17px; }
+  .zip-label {
+    position: absolute; }
+    .zip-label p {
+      margin-top: 25px;
+      margin-left: 100px; }
+  .zip-code-input {
+    margin-top: 15px;
+    margin-left: 180px;
+    width: 162px; }
+  .tool-cvc {
+    top: -85px;
+    bottom: auto !important;
+    left: 131px !important; }
+  .zip-code {
+    text-align: left; }
+  .q {
+    left: 152px !important;
+    top: -36px; }
+  .tool-zip {
+    top: -22px;
+    bottom: auto !important;
+    left: 266px !important; }
+  .pay-pal {
+    margin: 1em 0;
+    left: 180px;
+    width: 362px; }
+  .start-button {
+    margin: 0;
+    left: 180px;
+    width: 364px; } }
+
+@media (min-width: 769px) {
+  .block {
+    z-index: 1;
+    width: 90vw;
+    margin: 0 auto;
+    height: 450px;
+    margin-top: 20px; }
+  .clipart-block {
+    display: none; }
+  h1 {
+    width: 700px;
+    color: #444444;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 16px; }
+  .pay-form {
+    width: 612px;
+    padding-left: 40px; }
+    .pay-form p {
+      margin-top: 25px; }
+  .cardholder-label {
+    padding-left: 43px; }
+  .cardnumber-label {
+    position: absolute;
+    padding-left: 70px; }
+  .cardholder-input {
+    padding-left: 180px;
+    margin-top: 1em;
+    text-align: left; }
+  .first-name {
+    width: 162px; }
+  .last-name {
+    width: 162px;
+    margin-left: 1em; }
+  .card-number {
+    width: 162px; }
+  .cardholder-label, .cardholder-label, .exp-date-label {
+    position: absolute; }
+  .icon {
+    margin: 0 0; }
+  .card-date-cvv .cvc {
+    display: inline;
+    padding-left: 13px; }
+  .card-date-cvv .exp .exp-date {
+    width: 166px;
+    display: inline-block;
+    margin-top: 1em;
+    padding-left: 180px; }
+  .card-date-cvv .exp .exp-date .exp-date-mm {
+    width: 73px; }
+  .exp-date-label {
+    padding-left: 96px; }
+  .cvc {
+    position: absolute; }
+    .cvc .label {
+      left: 50px; }
+  .cvv-cvc-input {
+    position: absolute;
+    top: -48px;
+    left: 87px;
+    width: 76px !important; }
+  .clipart-md {
+    width: 200px;
+    display: inline;
+    position: absolute;
+    padding-top: 3px;
+    padding-left: 17px; }
+  .zip-label {
+    position: absolute; }
+    .zip-label p {
+      margin-top: 25px;
+      margin-left: 100px; }
+  .zip-code-input {
+    margin-top: 15px;
+    margin-left: 180px;
+    width: 162px; }
+  .tool-cvc {
+    top: -85px;
+    bottom: auto !important;
+    left: 131px !important; }
+  .zip-code {
+    text-align: left; }
+  .q {
+    left: 152px !important;
+    top: -36px; }
+  .tool-zip {
+    top: -22px;
+    bottom: auto !important;
+    left: 266px !important; }
+  .pay-pal {
+    margin: 1em 0;
+    left: 180px;
+    width: 362px; }
+  .start-button {
+    margin: 0;
+    left: 180px;
+    width: 364px; }
+  .block {
+    width: 1024px; }
+  .pay-form {
+    margin: 0;
+    padding-left: 0; }
+  .pay-pal-lg {
+    position: relative;
+    height: 250px;
+    width: 343px;
+    top: -207px;
+    left: 565px; }
+    .pay-pal-lg button {
+      right: 121px; }
+    .pay-pal-lg span {
+      top: 55px;
+      right: 114px; }
+  .start-button {
+    top: -265px; } }
